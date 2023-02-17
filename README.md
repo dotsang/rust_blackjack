@@ -1,3 +1,3 @@
 # rust_blackjack
 
-This is a simple blackjack game writtein in rust! 🦀
+This is a simple blackjack game written in rust! 🦀
