@@ -12,7 +12,7 @@ impl Card {
         }
     }
 
-    // matching card value to string
+    // matching card rank to int value
     fn card_value(&self) -> i32 {
         match self.rank.as_str() {
             "Ace (A)" => 11,
@@ -164,7 +164,7 @@ fn main() {
                     println!("{}", card.rank);
                 }
 
-                // check if computer wins
+                // check if computer has blackjack
                 if count_cards(&computer_cards) == 21 {
                     println!("\n> Computer got blackjack. ☹️");
                     break;
@@ -179,6 +179,7 @@ fn main() {
             let player_count = count_cards(&player_cards);
             let computer_count = count_cards(&computer_cards);
 
+            // check if players cards are greater, less than, or equal to computer
             if player_count > computer_count {
                 println!(
                     "\n> You got: {}, Computer got: {}, YOU WIN! 🎉",
