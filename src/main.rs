@@ -91,6 +91,7 @@ fn count_cards(cards: &Vec<Card>) -> i32 {
     // use filter method to count number of aces
     let mut ace_count = cards.iter().filter(|c| c.rank == "Ace (A)").count();
 
+    // if over 21 ace will count as 1
     while count > 21 && ace_count > 0 {
         count -= 10;
         ace_count -= 1;
@@ -99,6 +100,7 @@ fn count_cards(cards: &Vec<Card>) -> i32 {
     count
 }
 
+// game loop
 fn main() {
     println!("\n♠️♦️♣️♥️ *** Let's play some rusty blackjack! *** ♠️♦️♣️♥️");
     println!("\n🎲 *** Shuffling deck and dealing cards... *** 🎲");
